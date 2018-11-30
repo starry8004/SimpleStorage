@@ -1,0 +1,18 @@
+////컴파일러 버전 지정
+pragma solidity ^0.4.25; //①
+
+//계약선언
+contract SimpleSorage {
+  //변수선언
+  uint public storedData; //②
+  
+  // storedData 값 변경 ③
+  function set (unit x) public {
+      storedData = x;
+  }
+
+  // storedData 값 반환 ④
+  function get() public constant returns (uint) {
+      return storedData;
+  }
+}
